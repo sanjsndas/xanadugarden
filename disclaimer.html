@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5">
+  <title>Disclaimer · Xanadu Garden Works</title>
+  <meta name="description" content="Disclaimer for Xanadu Garden Works. Read our general disclaimer, affiliate disclosure, and content policy.">
+  <!-- Fonts: editorial serif + functional grotesk -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Martel:wght@300;400;700;900&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <style>
+    /* ---------- RESET & BASE (same as privacy, editorial) ---------- */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #faf8f4;
+      color: #1e2b2a;
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      line-height: 1.6;
+      padding: 0 1.5rem;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; height: auto; }
+    .container {
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+
+    /* ---------- TYPOGRAPHY ---------- */
+    h1, h2, h3, h4, .logo, .article-title, .nav-title {
+      font-family: 'Martel', serif;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+      color: #17201f;
+    }
+    .display-title {
+      font-size: clamp(2.8rem, 10vw, 5.2rem);
+      font-weight: 900;
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+    }
+    .section-title {
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      border-bottom: 3px solid #c7b7a3;
+      padding-bottom: 0.4rem;
+      margin-bottom: 2rem;
+      display: inline-block;
+    }
+    .subtitle {
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      font-size: 1.1rem;
+      color: #4a5f5c;
+      letter-spacing: 0.02em;
+    }
+    .meta {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #6b7e7a;
+      font-weight: 500;
+    }
+
+    /* ---------- COLOR PALETTE ---------- */
+    :root {
+      --primary: #1e3d3a;
+      --secondary: #b7a48b;
+      --accent: #cc7b4b;
+      --bg: #faf8f4;
+      --surface: #ffffff;
+      --text: #1e2b2a;
+      --muted: #4f6460;
+      --border: #e1d9cf;
+      --card-bg: #f6f3ed;
+    }
+
+    /* ---------- HEADER & NAV (identical) ---------- */
+    .site-header {
+      padding: 1.8rem 0 0.8rem;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo-group {
+      display: flex;
+      align-items: baseline;
+      gap: 0.6rem;
+    }
+    .logo {
+      font-size: 2rem;
+      font-weight: 900;
+      letter-spacing: -0.04em;
+      background: linear-gradient(145deg, #1e3d3a 0%, #3e615c 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .logo-tagline {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+      border-left: 2px solid var(--secondary);
+      padding-left: 0.8rem;
+      font-weight: 400;
+    }
+    .nav-primary {
+      display: flex;
+      gap: 2rem;
+      font-weight: 500;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .nav-primary a {
+      color: var(--primary);
+      border-bottom: 2px solid transparent;
+      padding-bottom: 0.25rem;
+      transition: 0.2s;
+    }
+    .nav-primary a:hover { border-bottom-color: var(--accent); color: #0f2825; }
+    .nav-primary li { list-style: none; }
+
+    /* ---------- DISCLAIMER PAGE SPECIFIC LAYOUT (mirrors cookies) ---------- */
+    .disclaimer-content {
+      max-width: 900px;
+      margin: 2.5rem auto 3.5rem;
+      background: var(--surface);
+      padding: 2.5rem 3rem;
+      border-radius: 2px;
+      border: 1px solid #e5ddd2;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+    }
+    .disclaimer-content h1 {
+      font-size: clamp(2.2rem, 5vw, 3.2rem);
+      margin-bottom: 0.2rem;
+    }
+    .disclaimer-content .last-updated {
+      color: var(--muted);
+      font-size: 0.85rem;
+      margin-bottom: 2rem;
+      display: block;
+      border-bottom: 1px solid #e5ddd2;
+      padding-bottom: 0.8rem;
+    }
+    .disclaimer-content h2 {
+      font-size: 1.6rem;
+      margin: 2rem 0 0.8rem 0;
+      font-weight: 700;
+    }
+    .disclaimer-content p, .disclaimer-content li {
+      color: #2d3d3b;
+      font-size: 0.98rem;
+      margin-bottom: 0.75rem;
+    }
+    .disclaimer-content ul {
+      padding-left: 1.8rem;
+      margin-bottom: 1rem;
+    }
+    .disclaimer-content ul li {
+      margin-bottom: 0.4rem;
+    }
+    .disclaimer-content a {
+      color: var(--accent);
+      border-bottom: 1px dotted #d4cbbc;
+    }
+    .disclaimer-content a:hover {
+      border-bottom-color: var(--accent);
+      color: #b46538;
+    }
+    .highlight-box {
+      background: var(--card-bg);
+      padding: 1.2rem 1.8rem;
+      border-left: 6px solid var(--secondary);
+      margin: 1.5rem 0;
+      border-radius: 2px;
+    }
+    .highlight-box strong {
+      color: var(--primary);
+    }
+
+    /* ---------- FOOTER (same as index) ---------- */
+    .site-footer {
+      margin-top: 2rem;
+      padding: 3rem 0 2rem;
+      border-top: 2px solid #d9cfc2;
+      background: #f2ede6;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 2.5rem;
+    }
+    .footer-grid h4 { font-size: 1rem; margin-bottom: 0.8rem; }
+    .footer-grid a { display: block; color: var(--muted); font-size: 0.85rem; margin-bottom: 0.3rem; }
+    .footer-grid a:hover { color: var(--primary); }
+    .footer-copy { margin-top: 2.5rem; font-size: 0.75rem; color: #6d7e79; border-top: 1px solid #d1c5b6; padding-top: 1.5rem; text-align: center; }
+
+    /* ---------- RESPONSIVE ---------- */
+    @media (max-width: 900px) {
+      .disclaimer-content { padding: 1.8rem; }
+    }
+    @media (max-width: 600px) {
+      body { padding: 0 0.8rem; }
+      .site-header { flex-direction: column; align-items: start; gap: 0.6rem; }
+      .nav-primary { flex-wrap: wrap; gap: 0.8rem 1.2rem; font-size: 0.8rem; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .logo-tagline { display: none; }
+      .disclaimer-content { padding: 1.2rem; }
+    }
+    a:focus-visible, button:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+    .tag { background: #dfd6c9; padding: 0.15rem 0.7rem; border-radius: 20px; font-size: 0.65rem; font-weight: 600; color: #2f403a; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- HEADER: identical brand + navigation -->
+    <header class="site-header">
+      <div class="logo-group">
+        <span class="logo">Xanadu  Garden Works</span>
+        <span class="logo-tagline">field guide · cultivated life</span>
+      </div>
+      <nav class="nav-primary">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="terms.html">Terms Of Privacy</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="cookies.html">Cookies Policy</a></li>
+        <li><a href="disclaimer.html" style="border-bottom-color: var(--accent);">Disclaimer</a></li>
+        <li><a href="categories.html">Categories</a></li>
+      </nav>
+    </header>
+
+    <!-- DISCLAIMER CONTENT -->
+    <section class="disclaimer-content">
+      <h1>Disclaimer</h1>
+      <span class="last-updated"><strong>Last Updated:</strong> April 15, 2026</span>
+
+      <p>Welcome to <strong>Xanadu Garden Works</strong> (the "Site"). The information provided on this Site is for general informational and educational purposes only. By accessing and using this Site, you agree to the terms of this Disclaimer. If you do not agree, please refrain from using our Site.</p>
+
+      <div class="highlight-box">
+        <strong>Our Promise:</strong> We are committed to providing accurate, well-researched, and thoughtful content about gardening, horticulture, and the cultivated life. However, all content is provided "as is" and should be used with common sense and professional guidance where appropriate.
+      </div>
+
+      <h2>General Information Only</h2>
+      <p>The content on Xanadu Garden Works is for informational and educational purposes only. It is not intended to be a substitute for professional advice, whether agricultural, horticultural, medical, legal, or otherwise. Always seek the advice of a qualified professional with any questions you may have regarding plant cultivation, soil health, pest management, or any other topic covered on this Site.</p>
+      <p>We do not guarantee that the information on this Site is complete, accurate, reliable, or current. Reliance on any information provided by Xanadu Garden Works is solely at your own risk.</p>
+
+      <h2>Affiliate Disclosure</h2>
+      <p>Some links on this Site may be affiliate links. This means that if you click on the link and make a purchase, we may receive a small commission at no additional cost to you. We only recommend products and services that we genuinely believe in and that align with our values of sustainable, thoughtful cultivation.</p>
+      <p>We are a participant in various affiliate programs designed to provide a means for us to earn fees by linking to products we recommend. All affiliate relationships are disclosed in accordance with the FTC guidelines.</p>
+
+      <h2>External Links &amp; Third-Party Content</h2>
+      <p>Our Site may contain links to external websites or third-party content. These links are provided for your convenience and do not signify our endorsement of the content, products, or services offered by third parties. We have no control over the content or practices of any linked sites and assume no responsibility for their accuracy, legality, or appropriateness.</p>
+      <p>We encourage you to review the privacy policies and terms of use of any third-party sites you visit.</p>
+
+      <h2>No Professional-Client Relationship</h2>
+      <p>Your use of this Site does not create a professional-client relationship between you and Xanadu Garden Works, its authors, or contributors. The information provided is not a substitute for professional consultation, and we strongly advise you to seek personalized advice from a qualified expert before making any decisions based on the content of this Site.</p>
+
+      <h2>Limitation of Liability</h2>
+      <p>To the fullest extent permitted by applicable law, Xanadu Garden Works and its owners, employees, contributors, and affiliates shall not be liable for any direct, indirect, incidental, special, consequential, or punitive damages arising out of your use of, or inability to use, the Site, including but not limited to damages for loss of profits, goodwill, data, or other intangible losses.</p>
+      <p>We do not warrant that the Site will be uninterrupted, secure, or free from errors or harmful components.</p>
+
+      <h2>Indemnification</h2>
+      <p>You agree to indemnify, defend, and hold harmless Xanadu Garden Works and its affiliates from and against any and all claims, liabilities, damages, costs, and expenses (including reasonable legal fees) arising out of your use of the Site, your violation of this Disclaimer, or your infringement of any intellectual property or other rights of any third party.</p>
+
+      <h2>Updates to This Disclaimer</h2>
+      <p>We reserve the right to update or change this Disclaimer at any time without prior notice. Any changes will be effective immediately upon posting on this page. We encourage you to review this Disclaimer periodically to stay informed of any updates.</p>
+
+      <div class="highlight-box" style="border-left-color: var(--accent);">
+        <strong>Questions about our Disclaimer?</strong> We value transparency and clarity. If you have any questions or concerns about this Disclaimer, please <a href="contact.html">contact us</a> and we’ll be happy to help.
+      </div>
+    </section>
+
+    <!-- FOOTER (identical to index) -->
+    <footer class="site-footer">
+      <div class="footer-grid">
+        <div><h4>Xanadu Garden Works</h4><p style="color:var(--muted); font-size:0.9rem; max-width:260px;">A field guide for the cultivated life. Deep horticulture, living soil, and the art of place.</p></div>
+        <div><h4>Explore</h4><a href="#">Journal</a><a href="#">Field Notes</a><a href="#">Library</a><a href="#">Seasonal</a></div>
+        <div><h4>Resources</h4><a href="#">Glossary</a><a href="#">Plant Database</a><a href="#">Soil Calculator</a><a href="#">Compost Guide</a></div>
+        <div><h4>About</h4><a href="#">Editorial Policy</a><a href="#">Authors</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy &amp; Terms</a></div>
+      </div>
+      <div class="footer-copy">© 2026 Xanadu Garden Works — cultivated with care. All rights reserved.</div>
+    </footer>
+  </div>
+</body>
+</html>

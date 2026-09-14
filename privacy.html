@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5">
+  <title>Privacy Policy · Xanadu Garden Works</title>
+  <meta name="description" content="Privacy Policy for Xanadu Garden Works. Learn how we handle your data, cookies, and your rights.">
+  <!-- Fonts: editorial serif + functional grotesk -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Martel:wght@300;400;700;900&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <style>
+    /* ---------- RESET & BASE (same as index, premium editorial) ---------- */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #faf8f4;
+      color: #1e2b2a;
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      line-height: 1.6;
+      padding: 0 1.5rem;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; height: auto; }
+    .container {
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+
+    /* ---------- TYPOGRAPHY ---------- */
+    h1, h2, h3, h4, .logo, .article-title, .nav-title {
+      font-family: 'Martel', serif;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+      color: #17201f;
+    }
+    .display-title {
+      font-size: clamp(2.8rem, 10vw, 5.2rem);
+      font-weight: 900;
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+    }
+    .section-title {
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      border-bottom: 3px solid #c7b7a3;
+      padding-bottom: 0.4rem;
+      margin-bottom: 2rem;
+      display: inline-block;
+    }
+    .subtitle {
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      font-size: 1.1rem;
+      color: #4a5f5c;
+      letter-spacing: 0.02em;
+    }
+    .meta {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #6b7e7a;
+      font-weight: 500;
+    }
+
+    /* ---------- COLOR PALETTE ---------- */
+    :root {
+      --primary: #1e3d3a;
+      --secondary: #b7a48b;
+      --accent: #cc7b4b;
+      --bg: #faf8f4;
+      --surface: #ffffff;
+      --text: #1e2b2a;
+      --muted: #4f6460;
+      --border: #e1d9cf;
+      --card-bg: #f6f3ed;
+    }
+
+    /* ---------- HEADER & NAV (identical) ---------- */
+    .site-header {
+      padding: 1.8rem 0 0.8rem;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo-group {
+      display: flex;
+      align-items: baseline;
+      gap: 0.6rem;
+    }
+    .logo {
+      font-size: 2rem;
+      font-weight: 900;
+      letter-spacing: -0.04em;
+      background: linear-gradient(145deg, #1e3d3a 0%, #3e615c 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .logo-tagline {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+      border-left: 2px solid var(--secondary);
+      padding-left: 0.8rem;
+      font-weight: 400;
+    }
+    .nav-primary {
+      display: flex;
+      gap: 2rem;
+      font-weight: 500;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .nav-primary a {
+      color: var(--primary);
+      border-bottom: 2px solid transparent;
+      padding-bottom: 0.25rem;
+      transition: 0.2s;
+    }
+    .nav-primary a:hover { border-bottom-color: var(--accent); color: #0f2825; }
+    .nav-primary li { list-style: none; }
+
+    /* ---------- PRIVACY PAGE SPECIFIC LAYOUT ---------- */
+    .privacy-content {
+      max-width: 900px;
+      margin: 2.5rem auto 3.5rem;
+      background: var(--surface);
+      padding: 2.5rem 3rem;
+      border-radius: 2px;
+      border: 1px solid #e5ddd2;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+    }
+    .privacy-content h1 {
+      font-size: clamp(2.2rem, 5vw, 3.2rem);
+      margin-bottom: 0.2rem;
+    }
+    .privacy-content .last-updated {
+      color: var(--muted);
+      font-size: 0.85rem;
+      margin-bottom: 2rem;
+      display: block;
+      border-bottom: 1px solid #e5ddd2;
+      padding-bottom: 0.8rem;
+    }
+    .privacy-content h2 {
+      font-size: 1.6rem;
+      margin: 2rem 0 0.8rem 0;
+      font-weight: 700;
+    }
+    .privacy-content p, .privacy-content li {
+      color: #2d3d3b;
+      font-size: 0.98rem;
+      margin-bottom: 0.75rem;
+    }
+    .privacy-content ul {
+      padding-left: 1.8rem;
+      margin-bottom: 1rem;
+    }
+    .privacy-content ul li {
+      margin-bottom: 0.4rem;
+    }
+    .privacy-content a {
+      color: var(--accent);
+      border-bottom: 1px dotted #d4cbbc;
+    }
+    .privacy-content a:hover {
+      border-bottom-color: var(--accent);
+      color: #b46538;
+    }
+    .highlight-box {
+      background: var(--card-bg);
+      padding: 1.2rem 1.8rem;
+      border-left: 6px solid var(--secondary);
+      margin: 1.5rem 0;
+      border-radius: 2px;
+    }
+    .highlight-box strong {
+      color: var(--primary);
+    }
+
+    /* ---------- FOOTER (same as index) ---------- */
+    .site-footer {
+      margin-top: 2rem;
+      padding: 3rem 0 2rem;
+      border-top: 2px solid #d9cfc2;
+      background: #f2ede6;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 2.5rem;
+    }
+    .footer-grid h4 { font-size: 1rem; margin-bottom: 0.8rem; }
+    .footer-grid a { display: block; color: var(--muted); font-size: 0.85rem; margin-bottom: 0.3rem; }
+    .footer-grid a:hover { color: var(--primary); }
+    .footer-copy { margin-top: 2.5rem; font-size: 0.75rem; color: #6d7e79; border-top: 1px solid #d1c5b6; padding-top: 1.5rem; text-align: center; }
+
+    /* ---------- RESPONSIVE ---------- */
+    @media (max-width: 900px) {
+      .privacy-content { padding: 1.8rem; }
+    }
+    @media (max-width: 600px) {
+      body { padding: 0 0.8rem; }
+      .site-header { flex-direction: column; align-items: start; gap: 0.6rem; }
+      .nav-primary { flex-wrap: wrap; gap: 0.8rem 1.2rem; font-size: 0.8rem; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .logo-tagline { display: none; }
+      .privacy-content { padding: 1.2rem; }
+    }
+    a:focus-visible, button:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+    .tag { background: #dfd6c9; padding: 0.15rem 0.7rem; border-radius: 20px; font-size: 0.65rem; font-weight: 600; color: #2f403a; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- HEADER: identical brand + navigation -->
+    <header class="site-header">
+      <div class="logo-group">
+        <span class="logo">Xanadu  Garden Works</span>
+        <span class="logo-tagline">field guide · cultivated life</span>
+      </div>
+      <nav class="nav-primary">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="terms.html">Terms Of Privacy</a></li>
+        <li><a href="privacy.html" style="border-bottom-color: var(--accent);">Privacy Policy</a></li>
+        <li><a href="cookies.html">Cookies Policy</a></li> 
+        <li><a href="disclaimer.html">Disclaimer</a></li>
+        <li><a href="categories.html">Categories</a></li>
+      </nav>
+    </header>
+
+    <!-- PRIVACY POLICY CONTENT -->
+    <section class="privacy-content">
+      <h1>Privacy Policy</h1>
+      <span class="last-updated"><strong>Last Updated:</strong> April 15, 2026</span>
+      
+      <p>At <strong>Xanadu Garden Works</strong> (accessible from <a href="#">xanadugarden.works</a>), we value the privacy of our visitors and are committed to protecting it. This Privacy Policy document contains information on the types of data that we receive and collect when you use our site, and how we use it.</p>
+      
+      <p>If you have additional questions or require more information about our Privacy Policy, do not hesitate to <a href="contact.html">contact us</a>.</p>
+
+      <div class="highlight-box">
+        <strong>Our Commitment:</strong> We believe in the principles of transparency and simplicity. We do not sell your personal information. This policy explains the measures we take to keep your data safe and your rights concerning that data.
+      </div>
+
+      <h2>Information We Collect</h2>
+      <p>The personal information that you are asked to provide, and the reasons why you are asked to provide it, will be made clear to you at the point we ask you to provide your personal information.</p>
+      <p>We collect information from you when you:</p>
+      <ul>
+        <li><strong>Fill out a contact form:</strong> We may ask for your name, email address, and any other details you provide to respond to your inquiry.</li>
+        <li><strong>Subscribe to a newsletter:</strong> If you sign up for our "Field Notes," we collect your email address.</li>
+        <li><strong>Interact with our site:</strong> We collect standard web log information (like your IP address, browser type, and referring pages) to understand how our audience uses our content.</li>
+      </ul>
+
+      <h2>How We Use Your Information</h2>
+      <p>We use the collected information for various purposes:</p>
+      <ul>
+        <li>To provide, maintain, and improve our website.</li>
+        <li>To respond to your comments, questions, and requests.</li>
+        <li>To send you technical notices, updates, security alerts, and support messages.</li>
+        <li>To monitor and analyze usage patterns and trends to improve the user experience.</li>
+      </ul>
+
+      <h2>Cookies and Web Beacons</h2>
+      <p>Like any other website, Xanadu Garden Works uses "cookies". These cookies are used to store information including visitors' preferences, and the pages on the website that the visitor accessed or visited. The information is used to optimize the users' experience by customizing our web page content based on visitors' browser type and/or other information.</p>
+      <p>You can choose to disable cookies through your individual browser options. More detailed information about cookie management with specific web browsers can be found at the browsers' respective websites.</p>
+      <p>For more detailed information on our use of cookies, please see our <a href="cookies.html">Cookies Policy</a>.</p>
+
+      <h2>Data Security</h2>
+      <p>The security of your data is important to us. We strive to use commercially acceptable means to protect your personal information. However, no method of transmission over the Internet, or method of electronic storage is 100% secure and we cannot guarantee its absolute security.</p>
+
+      <h2>Third-Party Disclosure</h2>
+      <p>We do not sell, trade, or otherwise transfer to outside parties your Personally Identifiable Information. This does not include website hosting partners and other parties who assist us in operating our website, conducting our business, or servicing you, so long as those parties agree to keep this information confidential.</p>
+
+      <h2>Your Data Protection Rights (GDPR & CCPA)</h2>
+      <p>Depending on your location, you may have the following rights regarding your personal data:</p>
+      <ul>
+        <li><strong>The right to access</strong> – You have the right to request copies of your personal data.</li>
+        <li><strong>The right to rectification</strong> – You have the right to request that we correct any information you believe is inaccurate.</li>
+        <li><strong>The right to erasure</strong> – You have the right to request that we erase your personal data, under certain conditions.</li>
+        <li><strong>The right to restrict processing</strong> – You have the right to request that we restrict the processing of your personal data.</li>
+        <li><strong>The right to data portability</strong> – You have the right to request that we transfer the data that we have collected to another organization, or directly to you.</li>
+      </ul>
+      <p>If you make a request, we will respond to you within one month. To make any of these requests, please <a href="contact.html">contact us</a>.</p>
+
+      <h2>Children's Information</h2>
+      <p>We do not knowingly collect any Personal Identifiable Information from children under the age of 13. If you think that your child provided this kind of information on our website, we strongly encourage you to contact us immediately and we will do our best efforts to promptly remove such information from our records.</p>
+
+      <h2>Changes to This Privacy Policy</h2>
+      <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page, and we will update the "Last Updated" date at the top of this policy.</p>
+      <p>You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.</p>
+      
+      <div class="highlight-box" style="border-left-color: var(--accent);">
+        <strong>Questions?</strong> We believe in open and honest communication. If you have any questions about this Privacy Policy, please <a href="contact.html">get in touch with our team</a>.
+      </div>
+    </section>
+
+    <!-- FOOTER (identical to index) -->
+    <footer class="site-footer">
+      <div class="footer-grid">
+        <div><h4>Xanadu Garden Works</h4><p style="color:var(--muted); font-size:0.9rem; max-width:260px;">A field guide for the cultivated life. Deep horticulture, living soil, and the art of place.</p></div>
+        <div><h4>Explore</h4><a href="#">Journal</a><a href="#">Field Notes</a><a href="#">Library</a><a href="#">Seasonal</a></div>
+        <div><h4>Resources</h4><a href="#">Glossary</a><a href="#">Plant Database</a><a href="#">Soil Calculator</a><a href="#">Compost Guide</a></div>
+        <div><h4>About</h4><a href="#">Editorial Policy</a><a href="#">Authors</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy & Terms</a></div>
+      </div>
+      <div class="footer-copy">© 2026 Xanadu Garden Works — cultivated with care. All rights reserved.</div>
+    </footer>
+  </div>
+</body>
+</html>

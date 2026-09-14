@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5">
+  <title>Categories · Xanadu Garden Works</title>
+  <meta name="description" content="Explore gardening categories at Xanadu Garden Works – perennials, vegetables, soil health, design, and more.">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Martel:wght@300;400;700;900&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <style>
+    /* ---------- RESET & BASE ---------- */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #faf8f4;
+      color: #1e2b2a;
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      line-height: 1.6;
+      padding: 0 1.5rem;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; height: auto; }
+    .container {
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+
+    /* ---------- TYPOGRAPHY ---------- */
+    h1, h2, h3, h4, .logo, .article-title, .nav-title {
+      font-family: 'Martel', serif;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+      color: #17201f;
+    }
+    .display-title {
+      font-size: clamp(2.8rem, 10vw, 5.2rem);
+      font-weight: 900;
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+    }
+    .section-title {
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      border-bottom: 3px solid #c7b7a3;
+      padding-bottom: 0.4rem;
+      margin-bottom: 2rem;
+      display: inline-block;
+    }
+    .subtitle {
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      font-size: 1.1rem;
+      color: #4a5f5c;
+      letter-spacing: 0.02em;
+    }
+    .meta {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #6b7e7a;
+      font-weight: 500;
+    }
+
+    /* ---------- COLOR PALETTE ---------- */
+    :root {
+      --primary: #1e3d3a;
+      --secondary: #b7a48b;
+      --accent: #cc7b4b;
+      --bg: #faf8f4;
+      --surface: #ffffff;
+      --text: #1e2b2a;
+      --muted: #4f6460;
+      --border: #e1d9cf;
+      --card-bg: #f6f3ed;
+    }
+
+    /* ---------- LAYOUT & NAVIGATION ---------- */
+    .site-header {
+      padding: 1.8rem 0 0.8rem;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo-group {
+      display: flex;
+      align-items: baseline;
+      gap: 0.6rem;
+    }
+    .logo {
+      font-size: 2rem;
+      font-weight: 900;
+      letter-spacing: -0.04em;
+      background: linear-gradient(145deg, #1e3d3a 0%, #3e615c 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .logo-tagline {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+      border-left: 2px solid var(--secondary);
+      padding-left: 0.8rem;
+      font-weight: 400;
+    }
+    .nav-primary {
+      display: flex;
+      gap: 2rem;
+      font-weight: 500;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .nav-primary a {
+      color: var(--primary);
+      border-bottom: 2px solid transparent;
+      padding-bottom: 0.25rem;
+      transition: 0.2s;
+    }
+    .nav-primary a:hover { border-bottom-color: var(--accent); color: #0f2825; }
+    .nav-primary a.active {
+        border-bottom-color: var(--accent);
+    }
+
+    /* ---------- CATEGORIES GRID ---------- */
+    .page-header {
+        margin: 3rem 0 2rem;
+    }
+    .page-header h1 {
+        font-size: clamp(2.8rem, 6vw, 4.2rem);
+        font-weight: 900;
+        line-height: 1.1;
+    }
+
+    .categories-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 2rem;
+        margin: 2.5rem 0 4rem;
+    }
+
+    .category-card {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        padding: 2rem 1.8rem;
+        transition: 0.25s ease;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+    }
+    .category-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+        border-color: var(--secondary);
+    }
+    .category-card .icon {
+        font-size: 2.8rem;
+        margin-bottom: 0.8rem;
+        display: block;
+    }
+    .category-card h3 {
+        font-size: 1.4rem;
+        margin-bottom: 0.5rem;
+        font-weight: 700;
+    }
+    .category-card p {
+        font-size: 0.95rem;
+        color: var(--muted);
+        margin-bottom: 1rem;
+        line-height: 1.5;
+    }
+    .category-card .badge {
+        background: var(--card-bg);
+        padding: 0.2rem 0.8rem;
+        border-radius: 30px;
+        font-size: 0.7rem;
+        font-weight: 600;
+        letter-spacing: 0.02em;
+        color: var(--primary);
+        display: inline-block;
+    }
+    .category-card .article-count {
+        font-size: 0.8rem;
+        color: var(--muted);
+        margin-top: 0.5rem;
+        display: block;
+    }
+
+    .featured-category {
+        background: var(--card-bg);
+        border-left: 6px solid var(--accent);
+        padding: 2rem 2.5rem;
+        border-radius: 4px;
+        margin: 2rem 0 3rem;
+    }
+    .featured-category h3 {
+        font-size: 1.6rem;
+        margin-bottom: 0.3rem;
+    }
+    .featured-category p {
+        font-size: 1.05rem;
+        color: var(--text);
+        max-width: 700px;
+    }
+
+    /* ---------- FOOTER ---------- */
+    .site-footer {
+      margin-top: 3rem;
+      padding: 3rem 0 2rem;
+      border-top: 2px solid #d9cfc2;
+      background: #f2ede6;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 2.5rem;
+    }
+    .footer-grid h4 { font-size: 1rem; margin-bottom: 0.8rem; }
+    .footer-grid a { display: block; color: var(--muted); font-size: 0.85rem; margin-bottom: 0.3rem; }
+    .footer-grid a:hover { color: var(--primary); }
+    .footer-copy { margin-top: 2.5rem; font-size: 0.75rem; color: #6d7e79; border-top: 1px solid #d1c5b6; padding-top: 1.5rem; text-align: center; }
+
+    /* ---------- RESPONSIVE ---------- */
+    @media (max-width: 600px) {
+      body { padding: 0 0.8rem; }
+      .site-header { flex-direction: column; align-items: start; gap: 0.6rem; }
+      .nav-primary { flex-wrap: wrap; gap: 0.8rem 1.2rem; font-size: 0.8rem; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .logo-tagline { display: none; }
+      .categories-grid { grid-template-columns: 1fr; }
+      .featured-category { padding: 1.5rem; }
+    }
+
+    a:focus-visible, button:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- HEADER -->
+    <header class="site-header">
+      <div class="logo-group">
+        <span class="logo">Xanadu  Garden Works</span>
+        <span class="logo-tagline">field guide · cultivated life</span>
+      </div>
+      <nav class="nav-primary">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="terms.html">Terms Of Privacy</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="cookies.html">Cookies Policy</a></li>
+        <li><a href="disclaimer.html">Disclaimer</a></li>
+        <li><a href="categories.html" class="active">Categories</a></li>
+      </nav>
+    </header>
+
+    <!-- PAGE CONTENT: CATEGORIES -->
+    <section class="page-header">
+        <span class="meta" style="color:var(--accent);">🌿 EXPLORE</span>
+        <h1>All Categories</h1>
+        <p class="subtitle" style="font-size:1.2rem; max-width:700px; margin-top:0.5rem;">Dive into our curated topics — from soil science to seasonal wisdom.</p>
+    </section>
+
+    <!-- Featured Category -->
+    <div class="featured-category">
+        <span class="badge" style="background:var(--accent); color:#fff; margin-bottom:0.5rem;">★ Featured</span>
+        <h3>Living Soil &amp; Compost</h3>
+        <p>The heart of every garden is beneath your feet. Explore our in-depth guides on building healthy soil, composting techniques, and regenerative practices.</p>
+        <a href="#" style="color: var(--accent); font-weight: 600; display: inline-block; margin-top: 0.3rem;">Browse articles →</a>
+    </div>
+
+    <!-- Categories Grid -->
+    <div class="categories-grid">
+        <!-- Card 1 -->
+        <div class="category-card">
+            <span class="icon">🌱</span>
+            <h3>Perennials &amp; Ornamentals</h3>
+            <p>Design with long‑loved plants. Discover hardy perennials, flowering shrubs, and year‑round structure.</p>
+            <span class="badge">24 articles</span>
+        </div>
+        <!-- Card 2 -->
+        <div class="category-card">
+            <span class="icon">🥬</span>
+            <h3>Vegetables &amp; Herbs</h3>
+            <p>From kitchen gardens to market plots — grow your own food with confidence.</p>
+            <span class="badge">31 articles</span>
+        </div>
+        <!-- Card 3 -->
+        <div class="category-card">
+            <span class="icon">🌳</span>
+            <h3>Trees &amp; Woody Plants</h3>
+            <p>Canopy, shade, and structure. Care guides for fruit trees, natives, and specimen trees.</p>
+            <span class="badge">18 articles</span>
+        </div>
+        <!-- Card 4 -->
+        <div class="category-card">
+            <span class="icon">🧑‍🌾</span>
+            <h3>Soil &amp; Fertility</h3>
+            <p>Compost, mulch, biochar, and mineral balance — build living soil from the ground up.</p>
+            <span class="badge">22 articles</span>
+        </div>
+        <!-- Card 5 -->
+        <div class="category-card">
+            <span class="icon">🐝</span>
+            <h3>Wildlife &amp; Pollinators</h3>
+            <p>Invite birds, bees, and beneficial insects. Create habitats that support biodiversity.</p>
+            <span class="badge">15 articles</span>
+        </div>
+        <!-- Card 6 -->
+        <div class="category-card">
+            <span class="icon">🌿</span>
+            <h3>Garden Design</h3>
+            <p>Layouts, planting schemes, hardscaping, and the art of placemaking in your garden.</p>
+            <span class="badge">19 articles</span>
+        </div>
+        <!-- Card 7 -->
+        <div class="category-card">
+            <span class="icon">🌦️</span>
+            <h3>Seasonal Gardening</h3>
+            <p>What to do when — monthly tasks, seasonal sowing, and climate‑wise practices.</p>
+            <span class="badge">27 articles</span>
+        </div>
+        <!-- Card 8 -->
+        <div class="category-card">
+            <span class="icon">📖</span>
+            <h3>Field Notes</h3>
+            <p>Essays, observations, and stories from the garden — a journal of cultivated life.</p>
+            <span class="badge">14 articles</span>
+        </div>
+        <!-- Card 9 -->
+        <div class="category-card">
+            <span class="icon">🧪</span>
+            <h3>Plant Science</h3>
+            <p>Botany, propagation, genetics, and the fascinating biology behind your plants.</p>
+            <span class="badge">12 articles</span>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="footer-grid">
+        <div><h4>Xanadu Garden Works</h4><p style="color:var(--muted); font-size:0.9rem; max-width:260px;">A field guide for the cultivated life. Deep horticulture, living soil, and the art of place.</p></div>
+        <div><h4>Explore</h4><a href="#">Journal</a><a href="#">Field Notes</a><a href="#">Library</a><a href="#">Seasonal</a></div>
+        <div><h4>Resources</h4><a href="#">Glossary</a><a href="#">Plant Database</a><a href="#">Soil Calculator</a><a href="#">Compost Guide</a></div>
+        <div><h4>About</h4><a href="about.html">Editorial Policy</a><a href="#">Authors</a><a href="contact.html">Contact</a><a href="terms.html">Privacy & Terms</a></div>
+      </div>
+      <div class="footer-copy">© 2026 Xanadu Garden Works — cultivated with care. All rights reserved.</div>
+    </footer>
+  </div>
+</body>
+</html>
